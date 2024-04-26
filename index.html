@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );
+        }
+
+        .profile-card {
+            width: 500px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            position: relative;
+            background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );
+        }
+
+        .profile-card img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .profile-card h2 {
+            margin-top: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .social-icons {
+            position: relative;
+            top: 20px;
+            left: -195px;
+            right: 0;
+            text-align: center;
+            transform: translateY(-50%);
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 5px;
+            color: #666;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #666;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .references {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bolder;
+        }
+
+        .references a {
+            margin: 0 10px;
+            color: #666;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-card">
+        <img src="me-img.jpeg" alt="Profile Picture">
+        <h2>Saqlain Irshad</h2>
+        <p>BCA Student</p>
+        <p>Location: Kolkata</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="buttons">
+            <button onclick="showAbout()">About</button>
+            <button onclick="showContact()">Contact</button>
+            <button onclick="showExperience()">Experience</button>
+            <button onclick="showExperience()">References</button>
+        </div>
+
+        <div id="about" class="section active">
+            <h2>About</h2>
+            <p>"I'm a BCA student learning about computer applications and programming for a career in information
+                technology."</p>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+
+        <div id="experience" class="section">
+            <h2>Experience</h2>
+            <p>Work Experience: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Education: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div id="references" class="section">
+            <h2>References</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, distinctio!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, molestiae!</p>
+        </div>
+
+
+        <script>
+            function showAbout() {
+                document.getElementById("about").style.display = "block";
+                document.getElementById("contact").style.display = "none";
+                document.getElementById("experience").style.display = "none";
+                document.getElementById("references").style.display = "none";
+
+            }
+
+            function showContact() {
+                document.getElementById("about").style.display = "none";
+                document.getElementById("contact").style.display = "block";
+                document.getElementById("experience").style.display = "none";
+                document.getElementById("references").style.display = "none";
+
+            }
+
+            function showExperience() {
+                document.getElementById("about").style.display = "none";
+                document.getElementById("contact").style.display = "none";
+                document.getElementById("experience").style.display = "block";
+                document.getElementById("references").style.display = "none";
+
+            }
+
+            function showReferences() {
+                document.getElementById("about").style.display = "none";
+                document.getElementById("contact").style.display = "none";
+                document.getElementById("experience").style.display = "none";
+                document.getElementById("references").style.display = "block";
+            }
+        </script>
+
+</body>
+
+</html>
